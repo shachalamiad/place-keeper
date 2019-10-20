@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="home-page" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>place-keeper</title>
+</head>
+
+<body onload="onInit()">
+    <header>
+        <nav class="nav-bar-main flex">
+            <div class="logo">Place-Keeper.</div>
+            <ul class="bar-container flex">
+                <li class="list link"><a href="./user-prefs.html">User Form</a></li>
+                <li class="list">
+                    <button class="map-btn" onclick="onInitMap()"><img src="imgs/map-btn.png" /></button>
+                </li>
+                <li class="list">Services</li>
+                <li class="list">Policy</li>
+                <li class="list">Contact us</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="favorite"><span></span> Please enter your birth-date in the user form
+        to obtain an astrology forecast (with your favorite colors).
+        <div class="astology-image"></div>
+    </main>
+    
+
+    <script src="js/utilService.js"></script>
+    <script src="js/userPrefService.js"></script>
+    <script src="js/userPrefController.js"></script>
+    <script src="js/placeController.js"></script>
+    <script src="js/placeService.js"></script>
+</body>
+
+</html>

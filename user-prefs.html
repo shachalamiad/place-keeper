@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="user-form">
+<link rel="stylesheet" href="css/style.css">
+
+<body>
+    <h1>User Form</h1>
+    <nav>
+    </nav>
+    <main>
+        <section>
+            <form id="frmRegister" onsubmit="onSubmitForm()">
+                <table>
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" id="name" name="name" placeholder="First and last name" required /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="color">Favorite background Color:</label></td>
+                        <td><input type="color" id="background-color" name="favcolor" value="#9932CC"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="color">Favorite text color:</label></td>
+                        <td><input type="color" id="color" name="favcolor" value="#FFFFFF"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date">Enter your birth date:</label></td>
+                        <td><input type="date" id="birth-date" name="birth-date"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="time" required>Enter your birth time:</label></td>
+                        <td><input type="time" id="birth-time" name="birth-time"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">Age:</label></td>
+                        <td><input type="range" id="age" name="age" min="18" max="120" value="26"
+                                onchange="showAge(this.value);" />
+                            <span id="sAge">18</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">E-mail:</label></td>
+                        <td><input type="email" id="email" name="email" /></td>
+                    </tr>
+                </table>
+                <td><input type="submit" value="submit" /></td>
+            </form>
+        </section>
+    </main>
+    <footer class="submit-modal">
+    </footer>
+
+    <script src="js/utilService.js"></script>
+    <script src="js/userPrefService.js"></script>
+    <script src="js/userPrefController.js"></script>
+    <script src="js/placeController.js"></script>
+    <script src="js/placeService.js"></script>
+</body>
+
+</html>
