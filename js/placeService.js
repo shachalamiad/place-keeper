@@ -9,7 +9,7 @@ createUserLocations();
 function createUserLocations() {
     var locations;
     if (!locations || locations.length === 0) {
-        locations = [createUserLocation(29.55805, 34.94821, 'Eilat')];
+        locations = [createUserLocation(29.5580, 34.9482, 'Eilat')];
     }
     gUserLocations = locations;
     saveUserLocationsToStorage()
@@ -51,11 +51,11 @@ function getUserData() {
 
 function removeUserLocation(locationId) {
     var locationIdx = gUserLocations.findIndex(function(location){return location.id === locationId})
-    if (LocationIdx === -1) return;
+    if (locationIdx === -1) return;
     gUserLocations.splice(locationIdx, 1);
     saveUserLocationsToStorage();
+    return locationIdx;
 }
-
 
 function saveUserLocationsToStorage() {
     saveToStorage(User_Location_KEY, gUserLocations)

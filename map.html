@@ -44,16 +44,12 @@
     <span id="place-address"></span>
   </div>
 
-
-  <section class="footer-container"><span><a href="./index.html">Back to Home Page</a></span>
-    <span><a href="./user-prefs.html">Back to User Form</a></span>
-    <div class="latLng"></div>
-    <datalist id="locations-list" class="option">
-    </datalist>
-    <tr>
-      <td><label for="locations-list">Locations:</label></td>
-      <td><input type="text" id="locations-list" name="locations-list" list="locations-list" /></td>
-    </tr>
+  <section class="places-container">My Places:
+    <ul class="user-coordinates">
+    </ul>
+    <p>Click on the map to add a new place!</p>
+    <button><a href="./index.html">Back to Home Page</a></button>
+    <button><a href="./user-prefs.html">Back to User Form</a></button>
   </section>
 
   <script>
@@ -64,6 +60,11 @@
         zoom: 8,
         center: origin
       });
+      var marker = new google.maps.Marker({
+        position: { lat: 29.55805, lng: 34.94821 },
+        title: "Hola Coding Academy!"
+      });
+      marker.setMap(map);
       var clickHandler = new ClickEventHandler(map, origin);
     }
 

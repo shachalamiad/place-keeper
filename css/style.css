@@ -45,7 +45,7 @@ a:visited {
 }
 
 a:hover, a:link {
-  color:yellow;
+  color: black;
   /* text-decoration-line: none; */
 }
 
@@ -82,10 +82,6 @@ form {
   text-align: center;
 }
 
-.lang-selector {
-  display: flex;
-  justify-content: space-around;
-}
 
 .option {
   width: 30em;
@@ -114,6 +110,10 @@ form {
   font-size: inherit;
 }
 
+.lang-selector {
+  display: flex;
+  justify-content: space-around;
+}
 
 .submit-modal {
   background-color: blanchedalmond;
@@ -210,8 +210,20 @@ input[type=text] {
   background-color: gold;
 }
 
-  .latLng {
-    width: max-content;
-    height: max-content;
-    top: 20px;
-  }
+.latLng {
+  width: max-content;
+  height: max-content;
+  top: 20px;
+}
+
+.places-container {
+  position: fixed;
+  top: 4rem;
+  left: 2rem;
+  background-color: bisque;
+}
+
+.rmv-location-btn {
+  border-color: transparent;
+  background-color: transparent;
+}

@@ -8,45 +8,40 @@ function onMapClick(latLng) {
     var elLatLng = JSON.stringify(latLng);
     var latIndex = elLatLng.indexOf(":");
     var longIndex = elLatLng.indexOf(":", latIndex + 1);
-    var lat = elLatLng.substring(latIndex + 1, latIndex + 9);
-    var long = elLatLng.substring(longIndex + 1, longIndex + 9);
+    var lat = elLatLng.substring(latIndex + 1, latIndex + 8);
+    var long = elLatLng.substring(longIndex + 1, longIndex + 8);
     var locationName = createUserLocationName();
     onAddUserLocation(lat, long, locationName);
-    renderLocationDiv(lat, long, locationName);
 }
 
 function onAddUserLocation(lat, long, locationName) {
     addUserLocation(lat, long, locationName);
-    renderUserList();
+    renderUserLocations();
 }
 
-function renderUserList() {
+function renderUserLocations() {
     var userLocations = getLocations();
     var strHTMLs = userLocations.map(function (location) {
         return `
-        <option value="${location.locationName} ${location.lat} ${location.long}" label="${location.locationName}"
-                      oncontextmenu="onRemoveUserLocation()"/>
-     `
+        <li>
+        ${location.locationName} @ ${location.lat} : ${location.long}
+        <button class="rmv-location-btn" onclick="onRemoveLocation(${location.id})">[X]</button>
+        </li>`
     })
-    document.getElementById('locations-list').innerHTML = strHTMLs.join('');
+    document.querySelector('.user-coordinates').innerHTML = strHTMLs.join('');
+    renderDivColors();
 }
 
-function onRemoveUserLocation(el) {
-    console.log(el)
+function onRemoveLocation(el) {
     var isSure = confirm('Are you sure?')
     if (!isSure) return;
     removeUserLocation(el);
-    renderUserList();
-}
-
-function renderLocationDiv(lat, long, locationName) {
-    document.querySelector(".latLng").innerHTML = `The coordinates of ${locationName} are: lat is ${lat}, long is ${long}`;
-    renderDivColors();
+    renderUserLocations();
 }
 
 function renderDivColors() {
     var userData = getUserData();
-    let divContent = document.querySelector(".footer-container").style
+    let divContent = document.querySelector(".places-container").style
     if (!userData) {
         divContent.backgroundColor = "#FFA07A";
         divContent.color = "#FFFFFF";

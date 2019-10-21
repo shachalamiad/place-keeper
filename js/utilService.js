@@ -9,3 +9,7 @@ function loadFromStorage(key) {
     var value = JSON.parse(str)
     return value;
 }
+
+function clearLocalStorage() {
+    localStorage.clear();
+}
