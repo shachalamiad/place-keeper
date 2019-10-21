@@ -19,8 +19,12 @@ var gTrans = {
         en: 'Contact Us',
         he: 'צור קשר'
     },
+    map: {
+        en: 'map',
+        he: 'מפה'
+    },
     enter_birth_date: {
-        en: 'Please enter your birth-date in the user form to obtain an astrology forecast (with your favorite colors).',
+        en: 'Please enter your birth-date in the user form to obtain an astrology forecast (in your favorite colors).',
         he: 'אנא הזן את תאריך יום ההולדת בטופס המשתמש כדי לקבל תחזית אסטרולוגית, ברקע הצבעים האהובים עליך '
     }
 }
