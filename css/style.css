@@ -16,6 +16,10 @@ body {
   margin: auto;
 }
 
+/* body.rtl {
+  direction: rtl;
+} */
+
 header {
   background-image: url(../imgs/ocean.jpg);
   background-repeat: no-repeat;
@@ -78,6 +82,10 @@ form {
   text-align: center;
 }
 
+.lang-selector {
+  display: flex;
+  justify-content: space-around;
+}
 
 .option {
   width: 30em;
@@ -95,6 +103,17 @@ form {
   display: flex;
   justify-content: space-around;
 }
+
+.lang-dropdown {
+  cursor: pointer;
+  margin-right: 5px;
+  border-color: transparent;
+  background-color: transparent;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: inherit;
+}
+
 
 .submit-modal {
   background-color: blanchedalmond;

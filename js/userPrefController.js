@@ -95,3 +95,15 @@ function renderSubmitModal() {
 function onReturnToHomePage() {
     window.location = "./index.html";
 }
+
+function onSetLang(lang) {
+    setLang(lang);
+    // if (lang === 'he') {
+    //     document.body.classList.add('rtl');
+    // } else {
+    //     document.body.classList.remove('rtl');
+    // }
+    doTrans();
+    // renderSomething();
+}
+

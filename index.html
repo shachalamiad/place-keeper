@@ -14,24 +14,31 @@
         <nav class="nav-bar-main flex">
             <div class="logo">Place-Keeper.</div>
             <ul class="bar-container flex">
-                <li class="list link"><a href="./user-prefs.html">User Form</a></li>
+                <li class="list link"><a href="./user-prefs.html" data-trans="userform">User Form</a></li>
                 <li class="list">
                     <button class="map-btn" onclick="onInitMap()"><img src="imgs/map-btn.png" /></button>
                 </li>
-                <li class="list">Services</li>
-                <li class="list">Policy</li>
-                <li class="list">Contact us</li>
+                <li class="list" data-trans="services">Services</li>
+                <li class="list" data-trans="policy">Policy</li>
+                <li class="list" data-trans="contact_us">Contact us</li>
             </ul>
+            <div class="lang-selector">
+                <select class="lang-dropdown" onchange="onSetLang(this.value)">
+                    <option value="en">English</option>
+                    <option value="he">עברית</option>
+                </select>
+            </div>
+        </div>
         </nav>
     </header>
-    <main class="favorite"><span></span> Please enter your birth-date in the user form
+    <main class="favorite" data-trans="enter_birth_date"><span ></span> Please enter your birth-date in the user form
         to obtain an astrology forecast (with your favorite colors).
         <div class="astology-image"></div>
     </main>
-    
 
     <script src="js/utilService.js"></script>
     <script src="js/userPrefService.js"></script>
+    <script src="js/i18nService.js"></script>
     <script src="js/userPrefController.js"></script>
     <script src="js/placeController.js"></script>
     <script src="js/placeService.js"></script>
