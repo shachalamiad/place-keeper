@@ -34,10 +34,10 @@ function renderUserAstrology(userData) {
 
 function astrologyForecast() {
     let Astrology = [];
-    Astrology[0] = `Your astrology forecast: You will enjoy worldwide peace ${renderAstrologyImage(0)}`;
-    Astrology[1] = `Your astrology forecast: You will be contacted by an old friend ${renderAstrologyImage(1)}`;
-    Astrology[2] = `Your astrology forecast: You will win the Lottery next year ${renderAstrologyImage(2)}`;
-    Astrology[3] = `Your astrology forecast: Spring will shine to you all along ${renderAstrologyImage(3)}`;
+    Astrology[0] = `Your astrology forecast: You will enjoy worldwide peace <br> ${renderAstrologyImage(0)}`;
+    Astrology[1] = `Your astrology forecast: You will be contacted by an old friend <br> ${renderAstrologyImage(1)}`;
+    Astrology[2] = `Your astrology forecast: You will win the Lottery next year <br> ${renderAstrologyImage(2)}`;
+    Astrology[3] = `Your astrology forecast: Spring will shine to you all along <br> ${renderAstrologyImage(3)}`;
     let i = Math.floor(4 * Math.random())
     return Astrology[i];
 }
